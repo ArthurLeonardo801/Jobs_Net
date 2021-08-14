@@ -7,7 +7,7 @@ namespace aec_webapi_entity_framework.Servicos
   {
     public DbContexto(DbContextOptions<DbContexto> options) : base(options) { }
 
-    public DbSet<Carro> Carros { get; set; }
-    public DbSet<Marca> Marcas { get; set; }
+    public DbSet<Usuario> Carros { get; set; }
+    public DbSet<Vagas> Marcas { get; set; }
   }
 }

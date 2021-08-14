@@ -4,8 +4,8 @@ using System.Text.Json.Serialization;
 
 namespace aec_webapi_entity_framework.Models
 {
-  [Table("carros")]
-  public class Carro
+  [Table("vagas")]
+  public class Vagas
   {
     [Key]
     [Column("id")]
@@ -16,22 +16,10 @@ namespace aec_webapi_entity_framework.Models
     [Required]
     public string Nome { get;set; }
 
-    [Column("modelo", TypeName = "varchar")]
-    [MaxLength(50)]
+    [Column("descricao", TypeName = "text")]
     [Required]    
-    public string Modelo { get;set; }
+    public string descricao { get;set; }
 
-    [Column("marca_id")]
-    [Required]
-    [ForeignKey("MarcaId")]
-    [JsonPropertyName("marca_id")]
-    public int MarcaId { get; set; }
-
-    [JsonIgnore]
-    public Marca Marca { get; set; }
-
-    [Column("ano", TypeName = "int")]
-    [Required]
-    public int Ano { get;set; }
+   
   }
 }
